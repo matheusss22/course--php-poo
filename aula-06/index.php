@@ -1,9 +1,8 @@
 <?php
 
-/*
-Classes abstratas são classes modelos para outras classes, logo não podem ser instânciadas 
-como objetos.
-*/
+
+# Uma classe abstrata é um modelo para outras classes, ou seja, elas não podem instanciar objetos, apenas herdam 
+# atributos e métodos a outras classes.
 
 abstract class Banco {
 
@@ -19,8 +18,8 @@ abstract class Banco {
         return $this->saldo;
     }
 
-    abstract protected function sacar($s); # define que a classe sacar é obrigatória nas classes que herdardam Banco
-    abstract protected function depositar($d); # define que a classe sacar é obrigatória nas classes que herdardam Banc
+    abstract protected function sacar($s); # define que a classe sacar é obrigatória nas classes que herdaram Banco
+    abstract protected function depositar($d); # define que a classe sacar é obrigatória nas classes que herdaram Banco
 }
 
 class Itau extends Banco {
@@ -35,6 +34,8 @@ class Itau extends Banco {
         echo "<hr>"."Depositou: R$".$d;
     }
 }
+
+
 
 //$banco = new Banco(); => Erro pois Banco é uma classe abstrata
 $itau = new Itau();

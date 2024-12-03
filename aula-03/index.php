@@ -7,7 +7,7 @@ class Login {
     private $senha;
     private $nome;
 
-    # Método construtor executa métodos setter para iniciar valores
+    # O método construtor geralmente executa métodos setter para iniciar valores que definem o estado inicial do obejto:
     public function __construct($email, $senha, $nome) {
         $this->setEmail($email);
         $this->setSenha($senha);
@@ -47,6 +47,8 @@ class Login {
         }
     }
 }
+
+
 
 $logar = new Login($email="teste@teste.com", $senha="123456", $nome="Matheus");
 echo "Email = ".$logar->getEmail()."<br>";

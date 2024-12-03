@@ -1,12 +1,15 @@
 <?php
 
-# Herança é um recurso que permite que classes compartilhem atributos e métodos ou comportamentos generalizados
+# Herança é um recurso que permite que classes compartilhem atributos, métodos ou comportamentos generalizados:
 
 class Veiculo {
+
+    # Atributos comuns a classes que contextualizam Veiculos:
     public $modelo;
     public $cor;
     public $ano;
 
+    # Atributos comuns a classes que contextualizam Veiculos:
     public function andar() {
         echo "Andando..."."<br>";
     }
@@ -17,28 +20,32 @@ class Veiculo {
 }
 
 class Carro extends Veiculo {
-    # Método exclusivo de carros
+    
+    # Método exclusivo da classe de Carro:
     public function ligarLimpador() {
         echo "Ligando limpador..."."<br>";
     }
 
-    # Método exclusivo de carros
+    # Método exclusivo da classe de Carro:
     public function desligadorLimpador() {
         echo "Desligando limpador..."."<br>";
     }
 }
 
 class Moto extends Veiculo {
-    # Método exclusivo de moto
+
+    # Método exclusivo da classe de Moto:
     public function darGrau() {
         echo "Dando grau..."."<br>";
     }
 
-    # Método exclusivo de moto
+    # Método exclusivo da classe de Moto:
     public function cair() {
         echo "Caindo..."."<br>";
     }
 }
+
+
 
 $carro = new Carro();
 $carro->modelo = "Gol";

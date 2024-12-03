@@ -1,16 +1,16 @@
 <?php
 
 /*
-Modificadores de acesso
+    Modificadores de acesso
 
-public - Fará com que não haja ocultação nenhuma, toda propriedade ou método declarado como 
-public será acessível por todos que quiserem acessá-los.
+    public - Fará com que não haja ocultação nenhuma, toda propriedade ou método declarado como 
+    public será acessível por todos que quiserem acessá-los.
 
-protected - visibilidade protected faz com que somente os herdeiros vejam as propriedades ou
-métodos.
+    protected - visibilidade protected faz com que somente os herdeiros vejam as propriedades ou
+    métodos.
 
-private - ao contrário do public, esse modificador faz com que qualquer método ou propriedade 
-seja visível só e somente só pela classe que a declarou.
+    private - ao contrário do public, esse modificador faz com que qualquer método ou propriedade 
+    seja visível só e somente só pela classe que a declarou.
 */
 
 class Veiculo {
@@ -115,6 +115,8 @@ class Moto extends Veiculo {
         echo "Caindo..."."<br>";
     }
 }
+
+
 
 echo "<h1>######### Carro ###########</h1>";
 
