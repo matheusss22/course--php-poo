@@ -15,6 +15,8 @@ class Cliente {
     public $endereco;
 }
 
+
+
 $cliente = new Cliente();
 $cliente->nome = "Matheus Sousa";
 $cliente->endereco = "Rua xxx, Número: 177";

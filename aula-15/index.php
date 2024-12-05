@@ -33,6 +33,8 @@ class Carrinho {
     }
 }
 
+
+
 $produto1 = new Produto("Notebook", "1500");
 $produto2 = new Produto("Mouse", "50");
 
