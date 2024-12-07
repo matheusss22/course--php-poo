@@ -1,16 +1,28 @@
 <?php
 
 /*
-    Modificadores de acesso
 
-    public - Fará com que não haja ocultação nenhuma, toda propriedade ou método declarado como 
-    public será acessível por todos que quiserem acessá-los.
+Modificadores de acesso:
 
-    protected - visibilidade protected faz com que somente os herdeiros vejam as propriedades ou
-    métodos.
+Os modificadores de acesso determinam a visibilidade e acessibilidade dos atributos 
+(propriedades) e métodos de uma classe. Eles ajudam a controlar como e de onde esses 
+elementos podem ser acessados. 
 
-    private - ao contrário do public, esse modificador faz com que qualquer método ou propriedade 
-    seja visível só e somente só pela classe que a declarou.
+# public
+
+    Permite que o atributo ou método seja acessado de qualquer lugar: dentro da classe, 
+    por classes herdadas e por qualquer código externo.
+
+# protected 
+
+    Restringe o acesso ao atributo ou método apenas dentro da classe onde ele foi definido. 
+    Não pode ser acessado por classes herdadas ou código externo.
+
+# private 
+
+    Permite que o atributo ou método seja acessado dentro da classe onde foi definido e por
+    classes que herdam dela. Não pode ser acessado diretamente por código externo.
+
 */
 
 class Veiculo {
@@ -63,22 +75,18 @@ class Carro extends Veiculo {
         $this->setpossuiCarlotas($possuiCarlotas);
     }
     
-    # Método exclusivo de carros
     public function setpossuiCarlotas($possuiCarlotas) {
         $this->possuiCarlotas = $possuiCarlotas;
     }
 
-    # Método exclusivo de carros
     public function getpossuiCarlotas() {
         return $this->possuiCarlotas;
     }
 
-    # Método exclusivo de carros
     public function ligarLimpador() {
         echo "Ligando limpador..."."<br>";
     }
 
-    # Método exclusivo de carros
     public function desligadorLimpador() {
         echo "Desligando limpador..."."<br>";
     }
@@ -95,22 +103,18 @@ class Moto extends Veiculo {
         $this->setPossuiPortaCapacete($possuiPortaCapacete);
     }
 
-    # Método exclusivo de carros
     public function setPossuiPortaCapacete($possuiPortaCapacete) {
         $this->possuiPortaCapacete = $possuiPortaCapacete;
     }
 
-    # Método exclusivo de carros
     public function getPossuiPortaCapacete() {
         return $this->possuiPortaCapacete;
     }
 
-    # Método exclusivo de moto
     public function darGrau() {
         echo "Dando grau..."."<br>";
     }
 
-    # Método exclusivo de moto
     public function cair() {
         echo "Caindo..."."<br>";
     }

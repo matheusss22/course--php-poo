@@ -3,11 +3,12 @@
 # Método construtor.
 
 class Login {
+
     private $email;
     private $senha;
     private $nome;
 
-    # O método construtor geralmente executa métodos setter para iniciar valores que definem o estado inicial do obejto:
+    # O método construtor é chamado na instância do objeto
     public function __construct($email, $senha, $nome) {
         $this->setEmail($email);
         $this->setSenha($senha);
@@ -19,8 +20,7 @@ class Login {
     }
 
     public function setEmail($email) {
-        $email_filtrado = filter_var($email, FILTER_SANITIZE_EMAIL);
-        $this->email = $email_filtrado;
+        $this->email = $email;
     }
 
     public function getSenha() {
@@ -40,7 +40,7 @@ class Login {
     }
 
     public function logar() {
-        if ($this->email == "teste@teste.com" && $this->senha == "123456") {
+        if ($this->email === "teste@teste.com" && $this->senha === "123456") {
             echo "Logado com sucesso!";
         } else {
             echo "Dados inválidos";
@@ -50,7 +50,7 @@ class Login {
 
 
 
-$logar = new Login($email="teste@teste.com", $senha="123456", $nome="Matheus");
+$logar = new Login("teste@teste.com", "123456", "Matheus");
 echo "Email = ".$logar->getEmail()."<br>";
 echo "Senha = ".$logar->getSenha()."<br>";
 echo "Nome = ".$logar->getNome()."<br>";

@@ -4,8 +4,10 @@
 
 class Pessoa {
 
-    # Atributos
+    # Atributo
     public $nome;
+
+    # Atributo
     public $idade;
 
     # Método
